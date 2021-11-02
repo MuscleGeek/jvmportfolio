@@ -133,13 +133,13 @@ body ::-webkit-scrollbar-thumb {
   background-color: #1f2235;
 }
 
-/*
+
 @media only screen  and (max-width: 568px) {
-  .hightlighted-btn: {
+  .hightlighted-btn {
     z-index: -900
   }
 }
-*/
+
 /*Hire Me button attributes*/
 .primary-btn:hover {
   color: aliceblue;

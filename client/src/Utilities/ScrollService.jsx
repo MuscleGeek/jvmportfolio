@@ -88,3 +88,4 @@ export default class ScrollService {
     }
   };
 }
+/**ScrollService would be consumed in diferrent components by subscribing to it * It a type of Observable*/

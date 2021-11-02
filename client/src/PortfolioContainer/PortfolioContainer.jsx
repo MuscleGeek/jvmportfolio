@@ -2,7 +2,7 @@ import React from 'react';
 import {TOTAL_SCREENS} from '../Utilities/commonUtils.jsx'
 
 export default function PortfolioContainer() {
-
+                                    /**Display all the total screens availables */
     const mapAllScreens = () => {
         return (
             TOTAL_SCREENS.map((screen) => (

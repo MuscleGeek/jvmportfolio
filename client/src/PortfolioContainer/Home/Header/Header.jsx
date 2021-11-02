@@ -23,7 +23,7 @@ const Header = () => {
       <div
         key={Screen.screen_name}
         className={getHeaderOptionsClasses(i)}
-        onClick={() => switchScreen(i, Screen)}
+        onClick={() => switchScreen(i, Screen)} /**SWITCH TO CORRESPONDING COMPONENT */
       >
         <span>{Screen.screen_name}</span>
       </div>
@@ -34,7 +34,7 @@ const Header = () => {
     let classes = "header-option ";
     if (index < TOTAL_SCREENS.length - 1) classes += "header-option-separator ";
 
-    if (selectedScreen === index) classes += "selected-header-option ";
+    if (selectedScreen === index) classes += "selected-header-option "; /**THE INTENTION HERE IS TO HAVE THE NAME OF THE COMPONENT MARKED AS SELECTED WHEN CLICKED */
 
     return classes;
   };
@@ -43,7 +43,7 @@ const Header = () => {
     let screenComponent = document.getElementById(screen.screen_name);
     if (!screenComponent) return;
 
-    screenComponent.scrollIntoView({ behavior: "smooth" });
+    screenComponent.scrollIntoView({ behavior: "smooth" });   /**IF COMPONENT EXIST, WE ARE GOING TO HAVE SCREEN COMPONENT USING A SMOOTH MOVEMENT TO IT */
     setSelectedScreen(index);
     setShowHeaderOptions(false);
   };
@@ -56,26 +56,15 @@ const Header = () => {
 
   return (
     <div
-      className="header-container"
-      onClick={() => setShowHeaderOptions(!showHeaderOptions)}
-    >
+      className="header-container" onClick={() => setShowHeaderOptions(!showHeaderOptions)}>
       <div className="header-parent">
-        <div
-          className="header-hamburger"
-          onClick={() => setShowHeaderOptions(!showHeaderOptions)}
-        >
+        <div className="header-hamburger" onClick={() => setShowHeaderOptions(!showHeaderOptions)}>
           <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
         </div>
         <div className="header-logo">
           <span>$./whoami.sh</span>
         </div>
-        <div
-          className={
-            showHeaderOptions
-              ? "header-options show-hamburger-options"
-              : "header-options"
-          }
-        >
+        <div className={showHeaderOptions ? "header-options show-hamburger-options" : "header-options"}>
           {getHeaderOptions()}
         </div>
       </div>
