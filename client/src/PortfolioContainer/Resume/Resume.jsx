@@ -96,13 +96,13 @@ const Resume = (props) => {
         />
         <ResumeHeading
         heading={"Universidad San Jose Sede Occidente, Costa Rica"}
-        subHeading={"Degree Educational Sciences with Emphasis on Teaching"}
+        subHeading={"DEGREE EDUCATIONAL SCIENCES WITH EMPHASIS ON TEACHING"}
         fromDate={"2017"}
         toDate={"2019"}
         />
         <ResumeHeading
         heading={"4Geeks Academy, USA"}
-        subHeading={"FullStack Development Bootcamp"}
+        subHeading={"FULLSTACK DEVELOPMENT BOOTCAMP"}
         fromDate={"January 2021"}
         toDate={"April 2021"}
         />
