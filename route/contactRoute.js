@@ -1,10 +1,7 @@
 require('dotenv').config();
 const router = require("express").Router();
 const nodemailer = require("nodemailer");
-const { env } = require('process');
 
-
-const SECRET_KEY = process.env.PASS;
 
 router.post("/contact", (req, res) => {
   let data = req.body;
@@ -21,7 +18,7 @@ router.post("/contact", (req, res) => {
     port: 465,
     auth: {
       user: "chayoterecords@gmail.com",
-      pass: SECRET_KEY
+      pass: process.env.PASS
     },
   });
   let mailOptions = {
@@ -44,7 +41,7 @@ router.post("/contact", (req, res) => {
     try {
       if (error)
         return res.status(400).json({ msg: "Please Fill All The Fields!" });
-      res.status(200).json({ msg: "Thank You For Contacting Jonathan!." });
+      res.status(200).json({ msg: "Thank You For Contacting Jonathan!" });
     } catch (error) {
       if (error) return res.status(500).json({ msg: "There is server error" });
     }
