@@ -125,7 +125,8 @@ form{
     color: var(--white);
 }
 .col i:hover {
-    transform: scale(1.4);
+    transform: scale(1.4, 1.8);
+    color: greenyellow;
 }
 @media only screen and (max-width: 940px){
     .back-form{
@@ -143,4 +144,10 @@ form{
     form{
         flex: 0.9;
     }
+
+    .col a {
+        margin-left: -5px;
+    }
+   
+
 }

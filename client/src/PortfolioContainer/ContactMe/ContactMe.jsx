@@ -78,19 +78,19 @@ export default function ContactMe(props) {
           <h2 className="title">
             <Typical loop={Infinity} steps={['$touch hiring; echo "Get in touch!" >> hiring; 📧', 1000]} />
           </h2>{" "}
-          <a href="https://www.facebook.com/f0rb1dd3np0is0n">
+          <a href="https://www.facebook.com/f0rb1dd3np0is0n" target="_blank">
               <i className="fab fa-facebook" title="Facebook"></i>
           </a>
-          <a href="https://github.com/MuscleGeek">
+          <a href="https://github.com/MuscleGeek" target="_blank">
               <i className="fab fa-github" title="Github"></i>
           </a>
-          <a href="https://www.credly.com/users/jonathan-villalobos-mora/badges">
+          <a href="https://www.credly.com/users/jonathan-villalobos-mora/badges" target="_blank">
               <i className="fas fa-award" title="Credly"></i>
           </a>
-          <a href="https://www.linkedin.com/in/jonathan-villalobos-mora/">
+          <a href="https://www.linkedin.com/in/jonathan-villalobos-mora/" target="_blank">
               <i className="fab fa-linkedin" title="LinkedIn"></i>
           </a>
-          <a href="https://app.hackthebox.eu/profile/141921">
+          <a href="https://app.hackthebox.eu/profile/141921" target="_blank">
               <i className="fas fa-cube" title="Hackthebox"></i>
           </a>
         </div>
@@ -117,7 +117,7 @@ export default function ContactMe(props) {
                 <i className="fa fa-paper-plane" />
                 {bool ? (
                   <b className="load">
-                    <img src={loadingBar} alt="image not responding" />
+                    <img src={loadingBar} alt="Oops!, Something went wrong!" />
                   </b>
                 ) : (
                   ""

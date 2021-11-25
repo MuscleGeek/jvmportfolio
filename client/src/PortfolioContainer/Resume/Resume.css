@@ -142,6 +142,11 @@ font-size: 12px;
 text-align: justify;
 }
 
+.resume-heading-link {
+    font-size: 12px;
+    text-align: justify;
+    }
+
 .heading-date {
 background-color: #ff5823;
 padding: 4px 12px;

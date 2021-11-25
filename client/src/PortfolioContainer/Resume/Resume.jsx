@@ -4,6 +4,7 @@ import ScrollService from "../../Utilities/ScrollService.jsx";
 import Animations from "../../Utilities/Animations.jsx";
 import "./Resume.css";
 
+
 const Resume = (props) => {
     /*States*/
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
@@ -38,6 +39,10 @@ const Resume = (props) => {
         <div className="resume-heading-description">
           <span>{props.description ? props.description : ""}</span>
         </div>
+        <div className="resume-heading-link">
+          <span>{props.link ? props.link : ""}</span>
+        </div>
+        
       </div>
     );
   };
@@ -69,20 +74,25 @@ const Resume = (props) => {
     {
       title: "Personal Portfolio",
       duration: { fromDate: "2020", toDate: "2021" },
-      description:"A personal Portfolio website to showxase all my details and projects at one place",
-      subHeading: "Technologies used: ",
+      description:"A personal Portfolio website to showcase all my details and projects at one place",
+      subHeading: "Technologies used: MongoDB, Express, React, Node, Rxjs",
+      link: "https://jvmportfolio.herokuapp.com/"
+      
+    },
+    {
+      title: "RideApp Auto Rental",
+      duration: { fromDate: "2021", toDate: "2021" },
+      description: "Real Time Auto Rental Application with Stripe Payment, State management, User dashboard, Redux, actions, reducers and store, AOS animation, responsive design, Admin panel, Booking and more...",
+      subHeading: "Technologies used: MongoDB, Express, React, Node, Redux, Ant Desing",
+      link: "https://autorental.herokuapp.com/"
+      
     },
     {
       title: "Personal Portfolio",
-      duration: { fromDate: "2020", toDate: "2021" },
-      description: "A personal Portfolio website to showxase all my details and projects at one place",
+      duration: { fromDate: "2021", toDate: "2021" },
+      description: "A personal Portfolio website to showcase all my details and projects at one place",
       subHeading: "Technologies used: ",
-    },
-    {
-      title: "Personal Portfolio",
-      duration: { fromDate: "2020", toDate: "2021" },
-      description: "A personal Portfolio website to showxase all my details and projects at one place",
-      subHeading: "Technologies used: ",
+      link: "https://jvmportfolio.herokuapp.com/"
     }
   ];
 
@@ -165,6 +175,7 @@ const Resume = (props) => {
                 description={projectsDetails.description}
                 fromDate={projectsDetails.duration.fromDate}
                 toDate={projectsDetails.duration.toDate}
+                link={projectsDetails.link}
                 />
             ))}
         </div>,
